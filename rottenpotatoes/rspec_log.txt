@@ -1,0 +1,34 @@
+
+MoviesController
+  When specified movie has a director
+    should find movies with the same director
+  When a specified movie does not have a director
+    should redirect to the movies page
+  Editing
+    should find the movie
+    should render the edit template
+  Destroy
+    destroys or deletes a movie
+    redirects to movies#index after destroy
+  Show
+    should find the movie
+    should render the show template correctly
+  Get index
+    should render the index template
+    should assign the instance variable for title header
+    should assign the instance variable for release_date header
+
+Movie
+  .find_similar_movies
+    should find not movies by different director
+    director exists
+      finds similar movies correctly
+    director does not exist
+      handles sad path
+  .all_ratings
+    returns all ratings
+
+Finished in 0.6106 seconds (files took 3.75 seconds to load)
+15 examples, 0 failures
+
+Coverage report generated for Cucumber Features, RSpec to /home/ubuntu/environment/hw4/hw-acceptance-unit-test-cycle/rottenpotatoes/coverage. 56 / 60 LOC (93.33%) covered.
